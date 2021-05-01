@@ -11,6 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{42
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GloriaEvents.Services.EventComponent", "GloriaEvents.Services.EventRecords\GloriaEvents.Services.EventComponent.csproj", "{BF658366-05DE-4197-AF1C-721683362832}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Protos", "Protos", "{3A440F1A-88B2-4AE1-960B-53E353E79305}"
+	ProjectSection(SolutionItems) = preProject
+		EventComponent.proto = EventComponent.proto
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

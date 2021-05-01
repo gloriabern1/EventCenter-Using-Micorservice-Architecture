@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GloriaEvent.Grpc;
+using GloriaEvent.web.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,6 +26,10 @@ namespace Frontends
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddGrpcClient<Events.EventsClient>(
+                o => o.Address = new Uri(Configuration["ApiConfigs:EventComponent:Uri"]));
+
+            services.AddSingleton<Settings>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
