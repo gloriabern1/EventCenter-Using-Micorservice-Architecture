@@ -24,5 +24,21 @@ namespace GloriaEvent.Service.shoppingBasket.Repository
         {
             return await this.GetAll();
         }
+
+        public async Task<bool> EventExists(Guid eventId)
+        {
+            return await this.Any(e => e.EventId == eventId);
+        }
+
+        public async void AddEvent(Event theEvent)
+        {
+            await this.Insert(theEvent);
+
+        }
+
+        public async Task<bool> SaveChanges()
+        {
+            return (await this.SaveChangesasync() > 0);
+        }
     }
 }

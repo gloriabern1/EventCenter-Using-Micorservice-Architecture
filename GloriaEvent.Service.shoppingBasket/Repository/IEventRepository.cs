@@ -9,5 +9,8 @@ namespace GloriaEvent.Service.shoppingBasket.Repository
     {
         Task<Event> GetEventbyId(Guid EventId);
         Task<IEnumerable<Event>> GetAllEvents();
+        Task<bool> SaveChanges();
+        void AddEvent(Event theEvent);
+        Task<bool> EventExists(Guid eventId);
     }
 }
