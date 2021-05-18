@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using GloriaEvent.Grpc;
 using GloriaEvent.web.Models;
+using GloriaEvent.web.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +29,13 @@ namespace Frontends
             services.AddControllersWithViews();
             services.AddGrpcClient<Events.EventsClient>(
                 o => o.Address = new Uri(Configuration["ApiConfigs:EventComponent:Uri"]));
+
+            services.AddHttpClient<IEventComponentService, EventComponentService>(c =>
+            c.BaseAddress = new Uri(Configuration["ApiConfigs:EventComponent:Uri"]));
+
+            services.AddHttpClient<IShoppingBasketComponentService, ShoppingBasketComponentService>(c =>
+          c.BaseAddress = new Uri(Configuration["ApiConfigs:ShoppingBasketComponent:Uri"]));
+
 
             services.AddSingleton<Settings>();
         }
