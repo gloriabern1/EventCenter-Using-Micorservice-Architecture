@@ -115,7 +115,9 @@ C:\Users\Onyinye.okeke\source\repos\GloriaEventCenter\Frontends\bin\Debug\netcor
 C:\Users\Onyinye.okeke\source\repos\GloriaEventCenter\Frontends\bin\Debug\netcoreapp3.1\Grpc.Net.Client.dll
 C:\Users\Onyinye.okeke\source\repos\GloriaEventCenter\Frontends\bin\Debug\netcoreapp3.1\Grpc.Net.ClientFactory.dll
 C:\Users\Onyinye.okeke\source\repos\GloriaEventCenter\Frontends\bin\Debug\netcoreapp3.1\Grpc.Net.Common.dll
-C:\Users\Onyinye.okeke\source\repos\GloriaEventCenter\Frontends\obj\Debug\netcoreapp3.1\GloriaEvent.web.csproj.CoreCompileInputs.cache
-C:\Users\Onyinye.okeke\source\repos\GloriaEventCenter\Frontends\obj\Debug\netcoreapp3.1\GloriaEvent.web.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Onyinye.okeke\source\repos\GloriaEventCenter\Frontends\obj\Debug\netcoreapp3.1\GloriaEvent.web.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Onyinye.okeke\source\repos\GloriaEventCenter\Frontends\obj\Debug\netcoreapp3.1\GloriaEvent.web.csprojAssemblyReference.cache
+C:\Users\Onyinye.okeke\source\repos\GloriaEventCenter\Frontends\bin\Debug\netcoreapp3.1\Microsoft.Azure.KeyVault.Core.dll
+C:\Users\Onyinye.okeke\source\repos\GloriaEventCenter\Frontends\bin\Debug\netcoreapp3.1\Microsoft.Azure.Storage.Common.dll
+C:\Users\Onyinye.okeke\source\repos\GloriaEventCenter\Frontends\bin\Debug\netcoreapp3.1\Microsoft.Azure.Storage.Queue.dll
+C:\Users\Onyinye.okeke\source\repos\GloriaEventCenter\Frontends\bin\Debug\netcoreapp3.1\Rebus.dll
+C:\Users\Onyinye.okeke\source\repos\GloriaEventCenter\Frontends\bin\Debug\netcoreapp3.1\Rebus.AzureQueues.dll

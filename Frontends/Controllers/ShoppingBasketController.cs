@@ -2,25 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GloriaEvent.Messages;
 using GloriaEvent.web.Extensions;
 using GloriaEvent.web.Models;
 using GloriaEvent.web.Models.ServiceModels;
 using GloriaEvent.web.Models.ViewModels;
 using GloriaEvent.web.Services;
 using Microsoft.AspNetCore.Mvc;
+using Rebus.Bus;
 
 namespace GloriaEvent.web.Controllers
 {
     public class ShoppingBasketController : Controller
     {
         private readonly IShoppingBasketComponentService basketService;
-       // private readonly IBus bus;
+        private readonly IBus bus;
         private readonly Settings settings;
 
-        public ShoppingBasketController(IShoppingBasketComponentService basketService, Settings settings)
+        public ShoppingBasketController(IShoppingBasketComponentService basketService, 
+            Settings settings, IBus bus)
         {
             this.basketService = basketService;
-            //this.bus = bus;
+            this.bus = bus;
             this.settings = settings;
         }
 
@@ -67,11 +70,11 @@ namespace GloriaEvent.web.Controllers
             return RedirectToAction("Index");
         }
 
-        //public async Task<IActionResult> Pay()
-        //{
-        //    var basketId = Request.Cookies.GetCurrentBasketId(settings);
-        //    await bus.Send(new PaymentRequestMessage { BasketId = basketId });
-        //    return View("Thanks");
-        //}
+        public async Task<IActionResult> Pay()
+        {
+            var basketId = Request.Cookies.GetCurrentBasketId(settings);
+            await bus.Send(new PaymentRequestMessage { BasketId = basketId });
+            return View("Thanks");
+        }
     }
 }

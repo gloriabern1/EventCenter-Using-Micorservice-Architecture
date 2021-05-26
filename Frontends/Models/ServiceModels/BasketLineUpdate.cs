@@ -9,6 +9,8 @@ namespace GloriaEvent.web.Models.ServiceModels
     public class BasketLineUpdate
     {
         [Required]
-        public int TicketAmount { get; set; }s
+        public Guid LineId { get; set; }
+        [Required]
+        public int TicketAmount { get; set; }
     }
 }
