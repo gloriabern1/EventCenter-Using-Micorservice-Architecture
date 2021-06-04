@@ -3,7 +3,6 @@ using GloriaEvent.web.Models;
 using GloriaEvent.web.Models.ServiceModels;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -36,6 +35,11 @@ namespace GloriaEvent.web.Services
             var response = await _client.GetAsync($"/api/events/Get?CategoryId={CategoryId}");
             return await response.ReadContentAs<List<Events>>();
 
+        }
+        public async Task<Events> GetEvent(Guid id)
+        {
+            var response = await _client.GetAsync($"/api/events/{id}");
+            return await response.ReadContentAs<Events>();
         }
     }
 }

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <TestRunParameters>
+    <Parameter name="Goodfilename" value="[AppPath]\EventComponent.proto" />
+  </TestRunParameters>
+  <TestRunParameters>
+    <Parameter name="Badfilename" value="[AppPath]\EventCompont.proto" />
+  </TestRunParameters>
+</RunSettings>

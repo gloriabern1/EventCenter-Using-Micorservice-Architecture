@@ -10,6 +10,7 @@ namespace GloriaEvent.web.Services
     {
         Task<IEnumerable<Events>> GetAll();
         Task<IEnumerable<Categories>> GetAllCategories();
+        Task<Events> GetEvent(Guid id);
         Task<IEnumerable<Events>> GetEventsByCategoryId(Guid CategoryId);
     }
 }
